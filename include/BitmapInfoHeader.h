@@ -5,6 +5,8 @@
 
 #pragma pack(2)
 
+namespace Bitmap{
+
 struct BitmapInfoHeader
 {
   std::int32_t headerSize{40};
@@ -20,6 +22,8 @@ struct BitmapInfoHeader
   std::int32_t importantColors{0};
 
 };
+
+}
 
 
 

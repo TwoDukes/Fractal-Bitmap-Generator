@@ -5,6 +5,8 @@
 
 #pragma pack(2)
 
+namespace Bitmap{
+
 struct BitmapFileHeader
 {
   char header[2]{'B','M'};
@@ -12,6 +14,8 @@ struct BitmapFileHeader
   std::int32_t reserved{0};
   std::int32_t dataOffset;
 };
+
+}
 
 
 
