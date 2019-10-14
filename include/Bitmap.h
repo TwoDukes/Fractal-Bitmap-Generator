@@ -6,13 +6,13 @@
 #include <memory>
 using namespace std;
 
-namespace Bitmap{
+namespace Bitmapping{
 
 class Bitmap {
 private:
   int m_width{0};
   int m_height{0};
-  unique_ptr<uint8_t[]> m_pPixels{nullptr};
+  unique_ptr<uint8_t[]> m_pPixels;
 
 
 public:
