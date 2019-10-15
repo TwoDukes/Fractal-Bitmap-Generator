@@ -29,11 +29,11 @@ void FractalCreator::run(std::string name){
 FractalCreator::FractalCreator(int width, int height):m_width(width),
                                                       m_height(height),
                                                       m_histogram(new int[Mandelbrot::MAX_ITERATIONS]{0}),
-                                                      m_fractal(new int[m_width*m_height]{0}),
+                                                      m_fractal(new int[width*height]{0}),
                                                       m_bitmap(width, height),
                                                       m_zoomList(width, height)
 {
-    // Start of constructor method                                                    
+    // Start of constructor method                                                   
     m_zoomList.add(Zoom(m_width/2, m_height/2, 4.0/m_width));
 }
 
