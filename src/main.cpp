@@ -17,6 +17,10 @@ int main() {
 
   Bitmap bitmap(WIDTH, HEIGHT);
 
+  ZoomList zoomList(WIDTH, HEIGHT);
+
+  zoomList.add(Zoom(WIDTH/2, HEIGHT/2, 1));
+
   unique_ptr<int[]> histogram(new int[Mandelbrot::MAX_ITERATIONS]{0});
   unique_ptr<int[]> fractal(new int[WIDTH*HEIGHT]{0});
 
