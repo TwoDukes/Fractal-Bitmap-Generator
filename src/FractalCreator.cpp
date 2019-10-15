@@ -2,6 +2,16 @@
 
 namespace Fractal{
 
+void FractalCreator::run(std::string name){
+
+  addZoom(Zoom(295, m_height-202, 0.1));
+  addZoom(Zoom(312, m_height-304, 0.1));
+  calculateIndividualIterations();
+  cacluateTotalIterations();
+  drawFractal();
+  writeBitmap(name);
+}
+
 FractalCreator::FractalCreator(int width, int height):m_width(width),
                                                       m_height(height),
                                                       m_histogram(new int[Mandelbrot::MAX_ITERATIONS]{0}),
@@ -18,7 +28,7 @@ FractalCreator::~FractalCreator() {
 }
 
 // Generates Fractal and Pixel Historgrams
-void FractalCreator::calculateIterations(){
+void FractalCreator::calculateIndividualIterations(){
   for(int y = 0; y < m_height; y++){
     for(int x = 0; x < m_width; x++){
       std::pair<double, double> coords = m_zoomList.doZoom(x, y);
@@ -37,7 +47,7 @@ void FractalCreator::calculateIterations(){
 void FractalCreator::cacluateTotalIterations(){
   
   for(int i = 0;i < Mandelbrot::MAX_ITERATIONS; i++){
-    m_total += m_histogram[i];
+    m_totalIterations += m_histogram[i];
   }
 }
 
@@ -57,7 +67,7 @@ void FractalCreator::drawFractal(){
         double hue = 0.0; // 0.0 - 1.0
 
         for(int j = 0; j <= iterations; j++){
-          hue += (double)(m_histogram[j])/m_total;
+          hue += (double)(m_histogram[j])/m_totalIterations;
         }
 
         red = 0;
