@@ -2,9 +2,11 @@
 #include <cstdint>
 #include <memory>
 #include <math.h>
+
 #include "Bitmap.h"
 #include "Mandelbrot.h"
 #include "ZoomList.h"
+#include "FractalCreator.h"
 
 using namespace std;
 using namespace Bitmapping;
