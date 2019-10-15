@@ -1,5 +1,4 @@
-#ifndef BITMAPFILEHEADER_H_
-#define BITMAPFILEHEADER_H_
+#pragma once
 
 #include<cstdint>
 
@@ -20,5 +19,3 @@ struct BitmapFileHeader
 #pragma pack(pop)
 
 }
-
-#endif // !BITMAPFILEHEADER_H_

@@ -4,6 +4,7 @@
 #include <math.h>
 #include "Bitmap.h"
 #include "Mandelbrot.h"
+#include "ZoomList.h"
 
 using namespace std;
 using namespace Bitmapping;
@@ -53,7 +54,7 @@ int main() {
       if(iterations != Mandelbrot::MAX_ITERATIONS){
 
         double hue = 0.0; // 0.0 - 1.0
-        
+
         for(int j = 0; j <= iterations; j++){
           hue += (double)(histogram[j])/total;
         }

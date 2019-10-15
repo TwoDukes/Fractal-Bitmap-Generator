@@ -1,5 +1,4 @@
-#ifndef MANDELBROT_H_
-#define MANDELBROT_H_
+#pragma once
 
 namespace Fractal{
 
@@ -16,5 +15,4 @@ public:
 
 }
 
-#endif // !MANDELBROT_H_
 

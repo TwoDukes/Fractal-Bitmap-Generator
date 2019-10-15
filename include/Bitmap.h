@@ -1,5 +1,4 @@
-#ifndef BITMAP_H_
-#define BITMAP_H_
+#pragma once
 
 #include <string>
 #include <cstdint>
@@ -23,5 +22,3 @@ public:
 };
 
 }
-
-#endif // !BITMAP_H_
